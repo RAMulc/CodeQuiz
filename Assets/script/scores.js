@@ -1,3 +1,4 @@
+var userScore = document.querySelector("#score");
 var initialsEl = document.querySelector("#last-score");
 var highScoresEl = document.querySelector("#high-scores");
 var highScoresListEL = document.querySelector("#high-scores-list");
@@ -9,6 +10,7 @@ var myScore = 0;
 
 function init() {
     retrieveStoredValues();
+    userScore.textContent = myScore;
 }
 
 function storeHighScores() {
