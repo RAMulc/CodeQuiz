@@ -4,7 +4,7 @@ var instructions = ["Select the correct option to answer each question.",
     "Get an answer correct, score a point.",
     "Get an answer wrong, lose a point.",
     "There is a time limit so don't take too long to answer!"];
-var quizTime = 12;
+var quizTime = 120;
 
 var Q0 = {
     Question: "HTML stands for?",
