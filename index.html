@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./Assets/css/style.css"> -->
+    <title>Quiz</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" id="welcome" href="#"></a>
+        <a class="nav-link" href="./Assets/html/quiz.html">Start Quiz</a>
+        <a class="nav-link mr-auto" href="./Assets/html/score.html">High Scores</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-8 col-md-offset-4 text-center">
+                <h1 id="header"></h1>
+                <h3 id="desc"></h3>
+                <br>
+                <ul class="text-left" id="instruct"></ul>
+                <br>
+                <button id="start-button"> <a href="./Assets/html/quiz.html">Start Quiz</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Assets/qa/qa.js"></script>
+    <script>
+        document.getElementById("welcome").textContent = quizName + " Quiz";
+        document.getElementById("header").textContent = "Welcome to the " + quizName + " Quiz";
+        document.getElementById("desc").textContent = description;
+
+        instructions.forEach(instruction => {
+            var li = document.createElement("li");
+            li.textContent = instruction;
+            document.getElementById("instruct").appendChild(li);
+        });
+    </script>
+
+</body>
+
+</html>

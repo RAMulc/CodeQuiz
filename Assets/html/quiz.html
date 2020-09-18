@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Quiz</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" id="welcome" href="../../index.html"></a>
+        <a class="nav-link mr-auto" href="./score.html">HighScores</a>
+        <h4 id="timer"></h4>
+    </nav>
+
+    <div class="quiz">
+        <div id="quiz-main" method="POST">
+            <h4>Question: <span id="question-number">0</span></h4>
+            <h1><span id="question">0</span></h1>
+        </div>
+        <p>Select the correct answer: </p>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul id="answer-list"></ul>
+                </div>
+            </div>
+        </div>
+        <p id="isRight"></p>
+        <p>Score: <span id="score">0</span></p>
+        <button id="next">Next question</button>
+    </div>
+
+    <script src="../qa/qa.js"></script>
+    <script>
+        document.getElementById("welcome").textContent = quizName + " Quiz";
+    </script>
+    <script src="../script/script.js"></script>
+</body>
+
+</html>

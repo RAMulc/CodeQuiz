@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Scores</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" id="welcome" href="../../index.html">HTML QUIZ</a>
+        <a class="nav-link mr-auto" href="./quiz.html">Start Quiz </a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="my-score">
+                    <h4>Your Score: <span id="score">0</span></h4>
+                    <form id="last-score" method="POST">
+                        <label for="initials-text">Initials:</label>
+                        <input type="text" placeholder="Please enter your initials?" name="initials-text"
+                            id="initials-text" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div id="high-scores">
+                    <h4>Top 10 Scores: </h4>
+                    <div id="high-scores-list">
+
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <button id="clear-scores">Clear High Scores</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../qa/qa.js"></script>
+    <script>
+        document.getElementById("welcome").textContent = quizName + " Quiz";
+    </script>
+    <script src="../script/scores.js"></script>
+</body>
+
+</html>
