@@ -128,7 +128,7 @@ initialsEl.addEventListener("submit", function (event) {
         highScores.sort(sortInitials);
         highScores.sort(function (a, b) { return b[1] - a[1]; })
         highScores = highScores.slice(0, 10);
-        console.log(highScores);
+        //console.log(highScores);
         storeHighScores();
         updateHighScores();
         setVisibilty(false);

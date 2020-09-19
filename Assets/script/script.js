@@ -1,5 +1,5 @@
 
-console.log(allQuestions);
+//console.log(allQuestions);
 
 var questionNum = document.querySelector("#question-number");
 var questionEl = document.querySelector("#question");
