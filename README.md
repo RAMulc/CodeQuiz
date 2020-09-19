@@ -23,13 +23,13 @@ The top 10 high scores are recorded in descending order.
 
 Welcome page with instructions for the use of the quiz, links to start the quiz and a link to the high scores page.
 
-![WelcomeScreen](.\Assets\images\WelcomeScreen.JPG)
+![WelcomeScreen](https://github.com/RAMulc/UWA_HW04/blob/master/Assets/images/WelcomeScreen.JPG)
 
 **./Assets/html/quiz.html**
 
 html content for the quiz pages, dynamically updated via scipt.js
 
-![SampleQuestion](.\Assets\images\SampleQuestion.JPG)
+![SampleQuestion](https://github.com/RAMulc/UWA_HW04/blob/master/Assets/images/SampleQuestion.JPG)
 
 **./Assets/script/script.js**
 
@@ -43,11 +43,11 @@ html content to record user score and top 10 high scores. Dynamically updated vi
 
 The user is prompted to enter their initials at the end of the quiz, for addition into the top 10 scores (should the score be good enough).
 
-![EnterInitials](.\Assets\images\EnterInitials.JPG)
+![EnterInitials](https://github.com/RAMulc/UWA_HW04/blob/master/Assets/images/EnterInitials.JPG)
 
 The top 10 scores are maintained within LocalStorage for the application, and may be erased by the user.
 
-![HighScores](.\Assets\images\HighScores.JPG)
+![HighScores](https://github.com/RAMulc/UWA_HW04/blob/master/Assets/images/HighScores.JPG)
 
 **./Assets/script/score.js**
 
