@@ -1,3 +1,4 @@
+// Information about the quiz, read by the welcome page
 var quizName = "HTML and JavaScript";
 var description = "A simple HTML and JavaScript quiz.";
 var instructions = ["Select the correct option to answer each question.",
@@ -6,6 +7,7 @@ var instructions = ["Select the correct option to answer each question.",
     "There is a time limit so don't take too long to answer!"];
 var quizTime = 120;
 
+// Questions stored with array of answers, and index of correct answer.
 var Q0 = {
     Question: "HTML stands for?",
     Options: ["Hyper Text Markup Language",
@@ -195,4 +197,5 @@ var Q20 = {
     AnswerIndex: 0
 };
 
+// All questions stored as an array 
 var allQuestions = [Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20];

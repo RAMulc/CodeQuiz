@@ -1,28 +1,35 @@
+// Grab various elements for update
 var userScore = document.querySelector("#score");
 var initialsEl = document.querySelector("#last-score");
 var highScoresEl = document.querySelector("#high-scores");
 var highScoresListEL = document.querySelector("#high-scores-list");
 var clearScoresEl = document.querySelector("#clear-scores");
 
+// Initialise highscores array
 var highScores = [];
 
+// Initialise user score
 var myScore = 0;
 
+// Initialise
 function init() {
     retrieveStoredValues();
     userScore.textContent = myScore;
 }
 
+// Store high scores in local storage
 function storeHighScores() {
     localStorage.setItem("HighScores", JSON.stringify(highScores));
 }
 
+// Clear stored high scores
 function clearHighScores() {
     highScores = [];
     storeHighScores();
     updateHighScores();
 }
 
+// Get values from local storage
 function retrieveStoredValues() {
     var storedScore = localStorage.getItem("QuizScore");
     if (storedScore !== null) {
@@ -46,6 +53,7 @@ function retrieveStoredValues() {
     }
 }
 
+// Set the visilibity of either the high scores or the user score after completing a game
 function setVisibilty(gamePlayed) {
     if (gamePlayed) {
         document.getElementById("high-scores").style.visibility = "hidden";
@@ -61,6 +69,7 @@ function setVisibilty(gamePlayed) {
     }
 }
 
+// Update the high scores
 function updateHighScores() {
     highScoresListEL.innerHTML = "";
 
@@ -94,6 +103,7 @@ function updateHighScores() {
     setVisibilty(false);
 }
 
+// Check for duplicate user initials, keep highest score if found
 function checkForDuplicate(newEntry) {
     for (var i = 0; i < highScores.length; i++) {
         if (newEntry[0] === highScores[i][0]) {
@@ -105,6 +115,7 @@ function checkForDuplicate(newEntry) {
 
 }
 
+// Sort the high scores by user initials
 function sortInitials(a, b) {
     if (a[0] === b[0]) {
         return 0;
@@ -114,17 +125,20 @@ function sortInitials(a, b) {
     }
 }
 
+// Clear local storage
 window.onbeforeunload = function () {
     localStorage.setItem("QuizScore", 0);
     localStorage.setItem("GameComplete", false);
 }
 
+// Event listener for submit on initials entry
 initialsEl.addEventListener("submit", function (event) {
     event.preventDefault();
     var initials = document.querySelector("#initials-text").value.trim().toUpperCase();
     if (initials !== "") {
         var newEntry = [initials, parseInt(myScore)];
         checkForDuplicate(newEntry);
+        // Sort high scores by initials, then by score (high to low) keep top 10 only
         highScores.sort(sortInitials);
         highScores.sort(function (a, b) { return b[1] - a[1]; })
         highScores = highScores.slice(0, 10);
@@ -135,6 +149,7 @@ initialsEl.addEventListener("submit", function (event) {
     }
 });
 
+// Clear stored high scores
 clearScoresEl.addEventListener("click", function (event) {
     event.preventDefault();
     var clearScores = confirm("Clear the high scores?");
